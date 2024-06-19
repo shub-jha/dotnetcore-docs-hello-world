@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy ASP.Net Core app to Azure Web App - WebnetApp
+name: Build and deploy ASP.Net Core app to Azure Web App - WebNetApp
 
 on:
   push:
@@ -52,15 +52,15 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v1
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_EC7A1D1FBBE34F0FA9230C2EF9016ACF }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_D327F3A52D8047D7AB9D68A963E33A90 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_B32A11791F9D4D8982469A1889A0229F }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_0707841AF7FB417AA96311F17DC66B79 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_02E536E4B2E84B8D86CB20CC4D6C88E1 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_46D00936F6914EFBABF16FE672E8C2F4 }}
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'WebnetApp'
+          app-name: 'WebNetApp'
           slot-name: 'Production'
           package: .
           
